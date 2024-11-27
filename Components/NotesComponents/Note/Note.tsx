@@ -26,8 +26,7 @@ import { useCurrentPageContext } from "@/context/CurrentPageContext";
 const Note = ({ id, title, content, pinned, createdAt, editedAt }: INote) => {
   const [pinLoading, setPinLoading] = useState<boolean>(false);
   const [deleteLoading, setDeleteLoading] = useState<boolean>(false);
-  const { notes, setNotes, filteredNotes, setFilteredNotes } =
-    useNotesContext();
+  const { notes, setNotes, setFilteredNotes } = useNotesContext();
   const [editedTitle, setEditedTitle] = useState<string>(title);
   const [editedContent, setEditedContent] = useState<string>(content);
   const [editedPinned, setEditedPinned] = useState<boolean>(pinned);

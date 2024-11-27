@@ -86,6 +86,10 @@ const Navbar = () => {
     }
   };
 
+  if (loading) {
+    return;
+  }
+
   return (
     <>
       <div className="flex justify-between items-center font-poppins">

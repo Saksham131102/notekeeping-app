@@ -21,7 +21,6 @@ const ThemeWrapper = () => {
     <main className="py-4 px-2 md:px-10 lg:px-40 bg-gray-50 text-black h-screen relative transition-colors duration-300">
       <Navbar />
       <Main />
-      {/* <Footer /> */}
       <Toaster />
     </main>
   );
