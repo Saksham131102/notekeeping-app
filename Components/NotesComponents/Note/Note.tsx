@@ -20,7 +20,6 @@ import {
 } from "@/Components/ui/dialog";
 import { Input } from "@/Components/ui/input";
 import { Textarea } from "@/Components/ui/textarea";
-import { Oval } from "react-loader-spinner";
 import { useToast } from "@/hooks/use-toast";
 import { useCurrentPageContext } from "@/context/CurrentPageContext";
 
@@ -186,13 +185,7 @@ const Note = ({ id, title, content, pinned, createdAt, editedAt }: INote) => {
               }}
             >
               {deleteLoading ? (
-                <Oval
-                  visible={true}
-                  height="20"
-                  width="20"
-                  color="#4fa94d"
-                  ariaLabel="oval-loading"
-                />
+                <span>•••</span>
               ) : (
                 <Trash2 className="text-red-500 text-2xl" />
               )}
@@ -201,13 +194,7 @@ const Note = ({ id, title, content, pinned, createdAt, editedAt }: INote) => {
           <div className="absolute top-2 right-2 cursor-pointer rounded-full p-1 hover:bg-gray-200 hover:bg-opacity-50 transition-colors duration-300">
             {/* <TiPinOutline className="text-gray-500 hover:text-gray-600 text-2xl transition-colors duration-300" /> */}
             {pinLoading ? (
-              <Oval
-                visible={true}
-                height="20"
-                width="20"
-                color="#4fa94d"
-                ariaLabel="oval-loading"
-              />
+              <span>•••</span>
             ) : pinned ? (
               <TiPin
                 onClick={(event) => {
