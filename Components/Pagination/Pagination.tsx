@@ -10,7 +10,7 @@ interface Props {
 
 const Pagination = ({ currentPage, setCurrentPage, totalPages }: Props) => {
   return (
-    <div className="flex justify-center items-center space-x-2 mt-4">
+    <div className="flex justify-center items-center space-x-2 mt-4 pb-4">
       <Button
         variant="outline"
         size="icon"
